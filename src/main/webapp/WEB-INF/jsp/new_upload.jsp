@@ -26,10 +26,11 @@
                       <div class="col-lg-12">
                           <div class="card">
                               <div class="card-header d-flex align-items-center">
-                                  <h3 class="h4">Enter File Information</h3>
+                                  <h3 class="h4">Single Upload</h3>
                               </div>
                               <div class="card-body">
-                                  <form method="post" id="uploadform" action="${pageContext.request.contextPath}/api/drive/upload">
+                                  <form method="post" id="uploadform"
+                                        action="${pageContext.request.contextPath}/api/drive/upload">
                                       <div class="form-group">
                                           <label class="form-control-label">URL</label>
                                           <input type="url" id="url" name="url" placeholder="Enter File URL here"
@@ -45,6 +46,34 @@
                                       <div class="form-group row">
                                           <div class="col-sm-12 offset-sm-5">
                                               <button type="submit" id="submit" class="btn btn-primary">Upload</button>
+                                          </div>
+                                      </div>
+                                  </form>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-lg-12">
+                          <div class="card">
+                              <div class="card-header d-flex align-items-center">
+                                  <h3 class="h4">Bulk Upload</h3>
+                              </div>
+                              <div class="card-body">
+                                  <form method="post" id="bulkUploadForm"
+                                        action="${pageContext.request.contextPath}/api/drive/upload">
+                                      <div class="form-group">
+                                          <label class="form-control-label">URLs</label>
+                                          <textarea id="urls"
+                                                    rows="5"
+                                                    placeholder="Enter multiple URLs here. To seperate URLs, use new line."
+                                                    class="form-control"></textarea>
+                                      </div>
+                                      <div class="form-group row">
+                                          <div class="col-sm-12 offset-sm-5">
+                                              <button type="submit" id="bulk_submit" class="btn btn-primary">
+                                                  Bulk Upload
+                                              </button>
                                           </div>
                                       </div>
                                   </form>
